@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+#MovingRect{
+  margin-left: 30%;
+  top: 17%;
+  width: 100px;
+  height: 50px;
+  background-color: #00bfff;
+  position: absolute;
+  /* animation-name: slide;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite; */
+}
+
+@keyframes slide {
+  0%   {background-color:red; left:0px; }
+  /* 25%  { left:30px; } */
+  50%  {background-color:red; left:100px; }
+  /* 75%  { left:60px; } */
+  100% {background-color:red; left:0px; }
+}
+
+@keyframes stop {
+  0%   {background-color:#00bfff; left:0px; }
+  /* 25%  { left:30px; } */
+  /* 50%  {background-color:red; left:100px; } */
+  /* 75%  { left:60px; } */
+  100% {background-color:#00bfff; left:0px; }
+}
+</style>
+
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/4.3.7/mqtt.min.js"
+  integrity="sha512-tc5xpAPaQDl/Uxd7ZVbV66v94Lys0IefMJSdlABPuzyCv0IXmr9TkqEQvZiWKRoXMSlP5YPRwpq2a+v5q2uzMg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MQTT Client</title>
+</head>
+<body>
+  <h1>Motion detect</h1>
+  
+  <!-- Click <a href="https://github.com/tigoe/mqtt-examples/tree/main/browser-clients/mqttjs/MqttJsClientSimple">here</a> for the source code -->
+  <!-- <button id="publishStatus" onclick="changeSendStatus(this)">stop publishing</button> -->
+  <div id='local'></div>
+  <div id='remote'></div>
+
+  <div id="MovingRect">
+        
+  </div>
+
+
+</body>
+</html>
